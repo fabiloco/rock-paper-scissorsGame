@@ -9,14 +9,27 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const bScissors = document.getElementById('scissors');
     const scUser = document.getElementById('scUser');
     const scCPU = document.getElementById('scCPU');
+    const result = document.getElementById('result');
+    const modal = document.querySelector('.modal');
 
 
     function lose() {
         scCPU.textContent = userCPU++;
+        result.innerHTML = `
+            <h2 class="text-win">You lose!</h2>
+            <p>Computer choose <strong>${cpuChoice}</strong></p>
+            `;
+        modal.style.display = 'block';
     }
 
     function win() {
         scUser.textContent = userScore++;;
+        result.innerHTML = `
+            <h2 class="text-win">You won!</h2>
+            <p>Computer choose <strong>${cpuChoice}</strong></p>
+            `;
+
+        modal.style.display = 'block';
     }
 
     function getCpuChoice() {
@@ -61,6 +74,15 @@ document.addEventListener('DOMContentLoaded', (e) => {
             play('scissors');
         });
     }
+
+    function clearModal(e) {
+        console.log('asdf');
+        if (e.target == modal) {
+            modal.style.display = "none"
+        }
+    }
+
+    window.addEventListener('click', clearModal);
 
     main();
 });

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', (e) => {
-    let userScore = 0;
-    let userCPU = 0;
+    let userScore = 1;
+    let userCPU = 1;
     let cpuChoice = '';
     let userChoice = '';
     const choices = ['rock', 'paper', 'scissors']
@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const result = document.getElementById('result');
     const modal = document.querySelector('.modal');
 
+
+    function draw() {
+        result.innerHTML = `
+            <h2 class="text-win">It's a draw!</h2>
+            <p>Computer choose <strong>${cpuChoice}</strong></p>
+            `;
+        modal.style.display = 'block';
+    }
 
     function lose() {
         scCPU.textContent = userCPU++;
@@ -57,6 +65,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             case 'rockrock':
             case 'scissorsscissors':
             case 'paperpaper':
+                draw();
                 console.log('empate');
                 break;
         }

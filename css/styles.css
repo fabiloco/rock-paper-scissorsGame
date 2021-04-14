@@ -2,12 +2,20 @@ body {
   margin: 0;
   font-family: monospace;
   font-size: 20px;
+  color: white;
+}
+
+.container {
+  background: url(../res/wallhaven-k9r787_1920x1080.png) no-repeat center top;
+  background-size: auto;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  justify-content: space-evenly;
   width: 80%;
   margin: 0 auto 0 auto;
 }
@@ -18,15 +26,46 @@ body {
 .main__score {
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
 }
 .main__score .main__dashboard {
   font-size: 2em;
-  border: 1px solid black;
+  border: 3px solid white;
+  border-radius: 20px;
   padding: 30px;
+}
+.main__score .main__player {
+  margin: 0 10px 0 10px;
+  background-color: #41DCEF;
+  border-radius: 20px;
+  border: 3px solid #561889;
+}
+.main__score .main__player h2 {
+  margin: 0;
+  padding: 16px;
 }
 
 .main__buttons {
   display: flex;
+}
+.main__buttons .button {
+  font-size: 2em;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  width: 80px;
+  padding: 20px;
+  text-align: center;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+.main__buttons .button h2 {
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #F804F9;
 }
 
 /*# sourceMappingURL=styles.css.map */

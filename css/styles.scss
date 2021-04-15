@@ -104,12 +104,21 @@ body {
         border-radius: 15px;
         color: black;
         background-color: #fff;
-        animation-name: modal-open;
+        animation-name: modalopen;
         animation-duration: 1s;
         .result {
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .modal {
+        .modal-container {
+            width: 600px;
+            height: 300px;
         }
     }
 }

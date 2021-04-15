@@ -39,7 +39,7 @@ body {
   margin-bottom: 30px;
 }
 .main__score .main__dashboard {
-  font-size: 2em;
+  font-size: 1.5em;
   border: 3px solid white;
   border-radius: 20px;
   padding: 30px;
@@ -103,6 +103,11 @@ body {
   animation-name: modal-open;
   animation-duration: 1s;
 }
+.modal .modal-container .result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
 @keyframes modalopen {
   from {
@@ -116,6 +121,18 @@ footer {
   text-align: center;
   padding: 20px;
   background-color: #F804F9;
+}
+
+.text-win {
+  color: #41DCEF;
+}
+
+.text-lose {
+  color: #F804F9;
+}
+
+.modal__text {
+  font-size: 1.4em;
 }
 
 /*# sourceMappingURL=styles.css.map */

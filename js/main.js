@@ -13,10 +13,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const modal = document.querySelector('.modal');
 
 
+
+
     function draw() {
         result.innerHTML = `
-            <h2 class="text-win">It's a draw!</h2>
-            <p>Computer choose <strong>${cpuChoice}</strong></p>
+            <h2 class="text-draw">It's a draw!</h2>
+            <p class="modal__text">Computer choose <strong>${cpuChoice}</strong></p>
             `;
         modal.style.display = 'block';
     }
@@ -24,8 +26,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
     function lose() {
         scCPU.textContent = userCPU++;
         result.innerHTML = `
-            <h2 class="text-win">You lose!</h2>
-            <p>Computer choose <strong>${cpuChoice}</strong></p>
+            <h2 class="text-lose">You lose!</h2>
+            <p class="modal__text">Computer choose <strong>${cpuChoice}</strong></p>
             `;
         modal.style.display = 'block';
     }
@@ -34,7 +36,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
         scUser.textContent = userScore++;;
         result.innerHTML = `
             <h2 class="text-win">You won!</h2>
-            <p>Computer choose <strong>${cpuChoice}</strong></p>
+            <p class="modal__text">Computer choose <strong>${cpuChoice}</strong></p>
             `;
 
         modal.style.display = 'block';
@@ -85,7 +87,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
 
     function clearModal(e) {
-        console.log('asdf');
         if (e.target == modal) {
             modal.style.display = "none"
         }

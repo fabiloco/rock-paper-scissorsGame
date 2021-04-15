@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     const scCPU = document.getElementById('scCPU');
     const result = document.getElementById('result');
     const modal = document.querySelector('.modal');
-
+    const restart = document.getElementById('restart');
 
 
 
@@ -86,6 +86,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
         });
     }
 
+    function reset() {
+        userScore = 1;
+        userCPU = 1;
+        scUser.textContent = '0'
+        scCPU.textContent = '0'
+    }
+
     function clearModal(e) {
         if (e.target == modal) {
             modal.style.display = "none"
@@ -93,6 +100,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
 
     window.addEventListener('click', clearModal);
-
+    restart.addEventListener('click', reset);
     main();
 });
